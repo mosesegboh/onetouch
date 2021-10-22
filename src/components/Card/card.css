@@ -6,8 +6,8 @@
 
 .card {
     background-color: #fff;
-    width: 473px;
-    height: 500px;
+    width: 370px;
+    height: 437px;
     margin: 15px 12px;
     border-radius: 10px;
 }
@@ -46,7 +46,7 @@ img {
 }
 
 .name{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-family: Bison-DemiBold, serif;
     color: #0037ae;
     border-bottom: 1px solid #0037ae;
@@ -89,7 +89,7 @@ img {
 }
 
 .tags {
-    margin: 10px 310px 0 0;
+    margin: 10px 220px 0 0;
     position: relative;
     height: 35px;
     border-radius: 5px;
@@ -100,7 +100,7 @@ img {
 
 .icons-tray {
     display: flex;
-    margin-top: 150px;
+    margin-top: 153px;
 }
 
 .icons {
