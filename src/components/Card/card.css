@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 40px;
+}
+
+.card {
+    background-color: #fff;
+    width: 473px;
+    height: 500px;
+    margin: 15px 12px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    transition-duration: 0.5s;
+}
+
+.card:hover #try-it {
+    background-color: #e8a130;
+ }
+
+img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+    margin-top: -45px;
+    z-index: -1;
+}
+
+.info {
+    text-align: left;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: #0037ae;
+    justify-content: left;
+    width: 50%;
+}
+
+.game-name {
+    /* border-bottom: 1px solid #0037ae; */
+    width: 100%;
+    height: 40px;
+    margin: 20px 0px 20px 0px;
+}
+
+.name{
+    font-size: 2.2rem;
+    font-family: Bison-DemiBold, serif;
+    color: #0037ae;
+    border-bottom: 1px solid #0037ae;
+    margin-bottom: 30px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.game-details{
+    color: #555;
+    margin-top: 40px;
+}
+
+.detail-section {
+    display: flex;
+    border: 1px solid #0037ae; 
+    height: 225px;
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+    margin-top: -15px;
+}
+
+.action {
+    width: 50%;
+    margin-top: 110px;
+}
+
+.action-button {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 130px;
+    background-color:#fff;
+    border:1px solid #0037ae;
+    height: 35px;
+    color: #0037ae
+}
+
+.action-button:hover {
+    background-color: #e8a130;
+}
+
+.tags {
+    margin: 10px 310px 0 0;
+    position: relative;
+    height: 35px;
+    border-radius: 5px;
+    width: 130px;
+    border:1px solid #0037ae;
+    color: #0037ae
+}
+
+.icons-tray {
+    display: flex;
+    margin-top: 150px;
+}
+
+.icons {
+    height: 20px;
+    width: 20px;
+    z-index: inherit;
+    margin-right: 10px;
+}
+
+.category {
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 2.2rem;
+    font-family: Bison-DemiBold, serif;
+    color: #0037ae;
+}
+
+
+
+
+
