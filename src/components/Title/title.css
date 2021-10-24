@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     color: #0037ae;
-    align-items: center;
 }
 
 .option{
@@ -50,6 +49,8 @@
 
 .sort:hover {
     background-color: #e8a130;
+    color: #fff;
+    border: 0;
 }
 
 .main-title {
@@ -57,4 +58,67 @@
     line-height:1;
     color: #0037ae;
     font-family: Bison-DemiBold, serif;;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .title {
+        width: 150px;
+        height: 180px;
+        flex-direction: column;
+        justify-content: left;
+        margin-left: 35px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .sort-boxes {
+        flex-direction: column;
+        border: 0;
+    }
+
+    .sort {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: 0px 10px;
+        height: 35px;
+        width: 140px;
+        background-color: #f2f2f2;
+        border: none;
+        border-radius: 5px;
+        align-content: center;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 80%;
+        background-position-y: 50%;
+        color: #0037ae;
+        padding: 0px;  
+        font-size: 16px;
+    }
+
+    .main-title {
+        height: 100px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        justify-content: left;
+        font-size: 1.5rem;
+        padding: 0px;
+    }
+
+    .sort-first, .sort-second {
+        display: flex;
+        margin-left: 40px;
+        margin-bottom: 0px;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .sort-first > label, .sort-second > label {
+        width:90px;
+        margin-left: 60px;
+        padding-top: 5px;
+    }  
 }

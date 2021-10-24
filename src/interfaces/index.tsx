@@ -1,11 +1,11 @@
 export interface GameRequest{
-    _id: String,
-    name: String,
-    description: String;
-    type: String;
-    thumbnailUrl: String;
-    link: String;
-    imageUrl: String
-    date: Date;
-    tags: [];
+    _id?: string,
+    name: string,
+    description?: string;
+    type: string;
+    thumbnailUrl: string;
+    link: string;
+    imageUrl?: string
+    date: string;
+    tags: string[];
 }

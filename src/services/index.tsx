@@ -1,5 +1,3 @@
-// import {GameRequest} from '../interfaces'
-
 const BaseUrl = 'https://frozen-basin-66995.herokuapp.com'
 
 type Response = {
@@ -16,5 +14,4 @@ export async function getGames(): Promise<Response> {
       },
     })
   return await response.json();
-   
 }
