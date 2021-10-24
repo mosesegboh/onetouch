@@ -80,7 +80,8 @@ img {
     height: 35px;
     background-color:#fff;
     border:1px solid #0037ae;
-    color: #0037ae
+    color: #0037ae;
+    cursor: pointer;
 }
 
 .action-button:hover {
