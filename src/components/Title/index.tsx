@@ -4,8 +4,7 @@ import './title.css';
 
 type Props = {
     search: {
-        sortBy:string,
-        filterBy:string,
+        [key:string]:string
     }
     onChange: (event:any) => void
 
@@ -40,10 +39,7 @@ export default function Title(props: Props) {
                         <label>GAME TYPE:</label>
                         <select value={filterBy} onChange={onChange} name="filterBy" className="sort">
                             <option value=''>FILTER BY</option>
-                            {/* {['ARCADE','SLOT', 'TABLE'].map((item,index) => <option className="option" key={index} value={item}>{item}</option>)} */}
-                            <option value='ARCADE'>ARCADE({totalArcade})</option>
-                            <option value='SLOT'>SLOT({totalSlot})</option>
-                            <option value='TABLE'>TABLE({totalTable})</option>
+                        {[{name:'ARCADE',count:totalArcade},{name:'SLOT',count:totalSlot}, {name:'TABLE',count:totalTable}].map((item,index) => <option className="option" key={index} value={item.name}>{item.name}({item.count})</option>)}
                         </select>
                     </div>
                 </div>

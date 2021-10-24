@@ -44,10 +44,14 @@ function filteredgames(gameList:GameRequest[],filteredBy:string){
     return filteredgames
 }
 
+function parseDate(date:string){
+    let dateArary = new Date(date).toDateString().slice(4).split(' ')
+    return [dateArary[1],dateArary[0],dateArary[2]].join('-')
+}
+
 type Props = {
     search:{
-        sortBy:string,
-        filterBy:string,
+        [key:string]:string
     }
 }
 
@@ -83,7 +87,7 @@ export default function CardListing(props:Props) {
             {(filterBy === '' || filterBy ==='SLOT') && <h1 className="category">SLOT GAMES</h1>}
             {
                 filtergames.map((item,index)=>(
-                    item.type.startsWith('slot') && <>  <Card link={item.link} tags={item.tags} key={index} name={item.name} type={item.type} thumbnailUrl={item.thumbnailUrl} date={item.date}/> </>
+                    item.type.startsWith('slot') && <Card link={item.link} tags={item.tags} key={index} name={item.name} type={item.type} thumbnailUrl={item.thumbnailUrl} date={item.date}/> 
                 ))
             }
             {
@@ -91,12 +95,13 @@ export default function CardListing(props:Props) {
             }
             {
                 filtergames.map((item,index)=>(
-                    item.type.startsWith('table') &&  <> <Card  link={item.link} tags={item.tags} key={index} name={item.name} type={item.type} thumbnailUrl={item.thumbnailUrl} date={item.date}/> </>
+                    item.type.startsWith('table') &&  <Card  link={item.link} tags={item.tags} key={index} name={item.name} type={item.type} thumbnailUrl={item.thumbnailUrl} date={item.date}/> 
                 ))
-            }.
+            }
+            {(filterBy === '' || filterBy ==='ARCADE') && <h1 className="category">ARCADE GAMES</h1>}
             {
                 filtergames.map((item,index)=>(
-                    item.type.startsWith('arcade') && <> <h1 className="category">ARCADE GAMES</h1>  <Card link={item.link} tags={item.tags} key={index} name={item.name} type={item.type} thumbnailUrl={item.thumbnailUrl} date={item.date}/></>
+                    item.type.startsWith('arcade') && <section key={index}>   <Card link={item.link} tags={item.tags} key={index} name={item.name} type={item.type} thumbnailUrl={item.thumbnailUrl} date={item.date}/></section>
                 ))
             }
         </div>
@@ -134,7 +139,7 @@ function Card(props:GameRequest) {
                         <div className="game-name">
                             <div className="name">{name}</div><br></br>
                             <span className="game-details">GAME TYPE: {type}<br></br>
-                            RELEASE: {date.slice(0, 10) }</span>
+                            RELEASE: {parseDate(date)} </span>
                         </div>
                         <div className="icons-tray">
                             <img className="icons" alt="ADNROID_ICON" src="https://www.onetouch.io/wp-content/uploads/2020/06/platform-android.svg"/>

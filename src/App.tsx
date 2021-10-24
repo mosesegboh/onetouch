@@ -6,10 +6,14 @@ import {GameRequest} from './interfaces'
 import { getGames } from './services'
 
 
+
+
+
+
 function App() {
 
   const [games,setGames] = useState<GameRequest[]>([])
-  const [search, setSearch] = useState<{sortBy:string,filterBy:string}>({
+  const [search, setSearch] = useState<{[key:string]:string}>({
     sortBy:'',
     filterBy: ''
   })
@@ -22,9 +26,8 @@ function App() {
     fetchGames() 
   },[])
 
-  let slotGames:  number = 0
-  let arcadeGames:  number = 0
-  let tableGames: number = 0
+  let slotGames:number=0,arcadeGames:number=0,tableGames:number = 0
+ 
   
   games.forEach(function (gameItem) {
     if (gameItem.type === 'slot') {
@@ -33,7 +36,7 @@ function App() {
         arcadeGames++
     } else if (gameItem.type === 'table') {
         tableGames++
-    }else{}
+    }
   });
 
   let gameDistribution = { 
@@ -42,14 +45,13 @@ function App() {
     totalTable: tableGames, 
  }; 
 
-
-  function handleChange(event:any){
+  function handleChange(event:React.MouseEvent<HTMLSelectElement>){
 
      const name:string = event.currentTarget.name
      const value:string = event.currentTarget.value
-     const searchCopy:{sortBy:string, filterBy:string} = {...search}
+     const searchCopy = {...search}
 
-    // @ts-ignore
+  
     searchCopy[name] = value
     setSearch(searchCopy)
   }
