@@ -5,11 +5,6 @@ import './css/styles.css'
 import {GameRequest} from './interfaces'
 import { getGames } from './services'
 
-
-
-
-
-
 function App() {
 
   const [games,setGames] = useState<GameRequest[]>([])
@@ -28,7 +23,6 @@ function App() {
 
   let slotGames:number=0,arcadeGames:number=0,tableGames:number = 0
  
-  
   games.forEach(function (gameItem) {
     if (gameItem.type === 'slot') {
         slotGames++
@@ -51,7 +45,6 @@ function App() {
      const value:string = event.currentTarget.value
      const searchCopy = {...search}
 
-  
     searchCopy[name] = value
     setSearch(searchCopy)
   }

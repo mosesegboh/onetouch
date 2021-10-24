@@ -25,9 +25,7 @@ const PopUp = (props: PopUpProps) =>{
                 </div>
             </div>
         ) : null
-
-    )
-   
+    ) 
 }
 
 export default PopUp
